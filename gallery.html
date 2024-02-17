@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
+<title>Sample</title>
+<link rel="stylesheet" href="css/stylegallery.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div id="logo">ARTEFACTS</div>
+  
+  
+  
+  <div class="navigation-wrapper">
+    <div class="navigation-button">
+		<img src="images/bars-solid.svg" alt="menu">
+    </div>
+    <div class="navigation-menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+			<li><a href="">ABOUT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+		  <li><a href="product.html">PRODUCTS</a></li>
+		  <li><a href="">DASHBOARD</a></li>	
+      </ul>
+    </div>
+  </div>
+	</div>
+	
+	
+	<slider>
+		<slide></slide>
+		<slide></slide>
+		<slide></slide>
+		<slide></slide>
+	</slider>
+	
+	
+	
+	
+	
+<script>
+    var navButton = document.querySelector('.navigation-button');
+var navMenu = document.querySelector('.navigation-menu');
+var win = window;
+
+function openMenu(event) {
+  
+  navButton.classList.toggle('active');
+  navMenu.classList.toggle('active');
+
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}
+  
+function closeMenu(event) {
+  if (navButton.classList.contains('active')) {
+    navButton.classList.remove('active');
+    navMenu.classList.remove('active');
+  }
+}
+  navButton.addEventListener('click', openMenu, false);
+
+win.addEventListener('click',closeMenu, false);
+    
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5dd9d01743be710e1d1ecdc1/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

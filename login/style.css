@@ -1,0 +1,17 @@
+body{
+	background: #fff;
+}
+#form{
+width:20%;
+background:white;
+margin:100px auto;
+border-radius:15px;
+border:solid grey 1px;
+}
+#btn{
+	color: #fff;
+	background: #123456;
+	padding: 5px;
+	margin-left: 60%; 
+
+}

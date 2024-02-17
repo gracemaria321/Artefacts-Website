@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    <style>
+    
+	#logo {
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  color: white;
+  font-size: 40px;
+  z-index: 1;
+}
+.navigation-wrapper {
+  position: relative;
+}
+.navigation-button {
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+  top: 40px;
+  right: 100px;
+  background: transparent;
+  cursor: pointer;
+}
+.navigation-button img {
+  border: 6px solid #000;
+  border-radius: 3px;
+  padding: 10px;
+  background: #fff;
+  height: 15px;
+  width: 15px;
+	
+}
+ 
+
+.navigation-menu ul li {
+  list-style: none;
+  font-family: impact;
+  font-weight: 300;
+  color: hsl(0,0%,70%);
+}
+
+.navigation-menu {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  background: #fff;
+  height: 100%;
+  transform: skewX(0deg) translate(100%,0);
+  transform-origin: top right;
+  transition: all .2s ease-in;
+  z-index: 1;
+}
+.navigation-menu ul {
+  transform: skewX(-8deg);
+  transform-origin: top left;
+  position: fixed;
+  right: 120px;
+  top: 120px;
+  width: 400px;
+  text-align: right;
+
+}
+.navigation-menu ul li {
+  position: relative;
+    z-index: 999;
+  font-size: 32px;
+  color: hsl(0,0%,10%);
+  line-height: 64px;
+}
+.navigation-menu ul li  a {
+  border: none;
+  color: hsl(0,0%,10%);
+  text-decoration: none;
+}
+.navigation-menu.active {
+  transform: skewX(8deg) translate(0,0);
+    
+}
+
+.navigation-menu li {
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: all .0s ease-in .3s;
+  
+}
+.navigation-menu.active li {
+  opacity: 1;
+  transform: translate(0,0);
+  transition: all .2s ease-in 0s;
+}
+.navigation-menu.active li:nth-child(1) {
+  transition-delay: .3s;
+}
+.navigation-menu.active li:nth-child(2) {
+  transition-delay: .4s;
+}
+.navigation-menu.active li:nth-child(3) {
+  transition-delay: .5s;
+}
+.navigation-menu.active li:nth-child(4) {
+  transition-delay: .6s;
+}
+.navigation-menu.active li:nth-child(5) {
+  transition-delay: .7s;
+}
+.navigation-menu.active li:nth-child(6) {
+  transition-delay: .8s;
+}
+        .hero h1{
+             
+            margin-top: 178px;
+            text-transform: uppercase;
+            font-family: impact;
+            font-size: 26px;
+            letter-spacing: 4px;
+            color: white;
+            
+             
+        } 
+        
+        span{
+            font-size: 65px;
+            letter-spacing: 2px;
+            font-family: impact;
+        }
+	
+		
+    * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #5F5F5F;
+    font: normal 13px/1.5;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+}
+.wrapper {
+    width: 1705px;
+    margin: 20px auto;
+    padding: 20px;
+}
+h1 {
+    display: inline-block;
+    background-color: #fff;
+    color: #ef4478;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 4px 20px;
+    float: left;
+    border-radius: 50px;
+}
+        
+.clear {
+    clear: both;
+}
+.items {
+    display: block;
+    margin: 20px 0;
+}
+.item {
+    background-color: #333;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 250px;
+    padding: 10px;
+     
+}
+.item img {
+    display: block;
+    margin: auto;
+	width: 250px;
+	height: 305px;
+}
+h2 {
+    font-size: 12px;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+}
+button {
+    border: 1px solid #ef4478;
+    padding: 4px 14px;
+    background-color: #ef4478;
+    color: #fff;
+    text-transform: uppercase;
+    float: right;
+    margin: 5px 0;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 50px;
+    
+}
+        button:focus{
+            outline: none !important;
+        }
+span {
+    float: right;
+}
+        
+        p{
+            font-size: 14px;
+        }
+.shopping-cart {
+    display: inline-block;
+    background: url("images/cart.png") no-repeat 0 0;
+    width: 24px;
+    height: 24px;
+    margin: 0 60px 0 0;
+}
+    
+    </style>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+	
+	
+<body>
+<div class="container">
+  <div id="logo">ARTEFACTS</div>
+  
+  
+  
+  <div class="navigation-wrapper">
+    <div class="navigation-button">
+		<img src="images/bars-solid.svg" alt="menu">
+    </div>
+    <div class="navigation-menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+			<li><a href="">ABOUT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+		  <li><a href="product.html">PRODUCTS</a></li>
+		  <li><a href="">DASHBOARD</a></li>	
+      </ul>
+    </div>
+  </div>
+	</div>
+	
+	
+	
+   <br><br><br>
+    <!-- wrapper -->
+<div class="wrapper">
+     <h1>ON OFFER</h1>
+ <span><i class="shopping-cart"></i></span>
+
+    <div class="clear"></div>
+    <!-- items -->
+    <div class="items">
+        <!-- single item -->
+        <div class="item">
+            <img src="images/7.jpg" alt="item" />
+            <br>
+             <h2>ITEM 1</h2>
+
+            <p>PRICE: $449 
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+        </div>
+        <!--/ single item -->
+        <!-- single item -->
+        <div class="item">
+            <img src="images/OOO.jpg" alt="item" />
+            <br>
+             <h2>ITEM 2</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+        </div>
+        <!--/ single item -->
+        <!-- single item -->
+        <div class="item">
+            <img src="images/QQ.JPG" alt="item" />
+            <br>
+             <h2>ITEM 3</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/UU.JPG" alt="item" />
+            <br>
+             <h2>ITEM 4</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/VV.JPG" alt="item" />
+            <br>
+             <h2>ITEM 5</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/WW.JPG" alt="item" />
+            <br>
+             <h2>ITEM 6</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/XX.JPG" alt="item" />
+            <br>
+             <h2>ITEM 7</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/ZZZ.jpg" alt="item" />
+            <br>
+             <h2>ITEM 8</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/AAAA.jpg" alt="item" />
+            <br>
+             <h2>ITEM 9</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/ZZZZ.jpg" alt="item" />
+            <br>
+             <h2>ITEM 10</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/Z.jpg" alt="item" />
+            <br>
+             <h2>ITEM 11</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/VVV.jpg" alt="item" />
+            <br>
+             <h2>ITEM 12</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/Y.jpg" alt="item" />
+            <br>
+             <h2>ITEM 13</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/QQQ.jpg" alt="item" />
+            <br>
+             <h2>ITEM 14</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/KK.jpg" alt="item" />
+            <br>
+             <h2>ITEM 15</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/FF.jpg" alt="item" />
+            <br>
+             <h2>ITEM 16</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/EEEE.jpg" alt="item" />
+            <br>
+             <h2>ITEM 17</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/BBB.jpg" alt="item" />
+            <br>
+             <h2>ITEM 18</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/DDD.jpg" alt="item" />
+            <br>
+             <h2>ITEM 19</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/WWW.jpg" alt="item" />
+            <br>
+             <h2>ITEM 20</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/LLL.jpg" alt="item" />
+            <br>
+             <h2>ITEM 21</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/YYY.jpg" alt="item" />
+            <br>
+             <h2>ITEM 22</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		<!-- single item -->
+        <div class="item">
+            <img src="images/XXX.jpg" alt="item" />
+            <br>
+             <h2>ITEM 23</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item --><!-- single item -->
+        <div class="item">
+            <img src="images/TTTT.jpg" alt="item" />
+            <br>
+             <h2>ITEM 24</h2>
+
+            <p>PRICE: $449
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+            
+        </div>
+        <!--/ single item -->
+		
+    </div>
+    <!--/ items -->
+</div>
+<!--/ wrapper -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    var navButton = document.querySelector('.navigation-button');
+var navMenu = document.querySelector('.navigation-menu');
+var win = window;
+
+function openMenu(event) {
+  
+  navButton.classList.toggle('active');
+  navMenu.classList.toggle('active');
+
+  event.preventDefault();
+  event.stopImmediatePropagation();
+}
+  
+function closeMenu(event) {
+  if (navButton.classList.contains('active')) {
+    navButton.classList.remove('active');
+    navMenu.classList.remove('active');
+  }
+}
+  navButton.addEventListener('click', openMenu, false);
+
+win.addEventListener('click',closeMenu, false);
+    
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5dd9d01743be710e1d1ecdc1/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
